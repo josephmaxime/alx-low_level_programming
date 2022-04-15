@@ -1,10 +1,11 @@
 #include <stdio.h>
-/*
- *main - Display a message with puts
+/**
+ * main - Entry
  *
+ * Return: 0 to success.
  */
 int main(void)
 {
-	puts("Programming is like building a multilingual puzzle");
+	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
