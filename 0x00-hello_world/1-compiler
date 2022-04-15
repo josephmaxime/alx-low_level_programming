@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -c $CFILE -Wall -Werror -Wextra -pedantic -std=gnu89 -o $("$CFILE"|cut -f1 -d".").o 
+gcc -c $CFILE -Wall -Werror -Wextra -pedantic -std=gnu89 -o $(echo $CFILE|cut -f1 -d".").o 
