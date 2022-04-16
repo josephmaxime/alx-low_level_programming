@@ -3,6 +3,8 @@
  *
  * Return: positive, negative or 0 the value of n
  */
+#include <stdio.h>
+
 #include <stdlib.h>
 
 #include <time.h>
@@ -18,15 +20,15 @@ int main(void)
 	/* your code goes there */
 	if (n > 0)
 	{
-		printf("%s\n", "is positive");
-	}
-	else if (n == 0)
-	{
-		printf("%s\n", "is zero");
+		printf("%d is positive\n", n);
 	}
 	else if (n < 0)
 	{
-		printf("%s\n", "is negative");
+		printf("%d is negative\n", n);
+	}
+	else
+	{
+		printf("%d is zero\n", n);
 	}
 	return (0);
 
