@@ -13,7 +13,7 @@
 /* betty style doc for function main goes there */
 int main(void)
 {
-	int n, m;
+	int n, m, o;
 
 	for (n = 0; n < 10; n++)
 	{
