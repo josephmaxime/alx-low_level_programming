@@ -15,12 +15,12 @@
 int main(void)
 {
 	int i;
-	String s = "_putchar\n";
-	int len = strlen(s);
+	char c[] = "_putchar\n";
+	int len = strlen(c);
 
-	for (i = 0; i < len; i++)
+	for (i = 0; i < length; i++)
 	{
-		_putchar(s[i]);
+		_putchar(c[i]);
 	}
 	return (0);
 }
