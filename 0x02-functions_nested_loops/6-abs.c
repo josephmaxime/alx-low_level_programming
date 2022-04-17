@@ -4,6 +4,8 @@
 
 #include <ctype.h>
 
+#include <stdlib.h>
+
 #include "main.h"
 
 /**
