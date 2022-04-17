@@ -21,4 +21,8 @@ int _islower(int);
 
 int _isalpha(int);
 
+/* print_sign */
+
+int print_sign(int);
+
 #endif
