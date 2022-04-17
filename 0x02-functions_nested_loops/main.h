@@ -27,6 +27,6 @@ int print_sign(int);
 
 /* _abs */
 
-int _abs(int)
+int _abs(int);
 
 #endif
