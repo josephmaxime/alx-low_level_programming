@@ -29,4 +29,8 @@ int print_sign(int);
 
 int _abs(int);
 
+/* print_last_digit */
+
+int print_last_digit(int);
+
 #endif
