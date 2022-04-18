@@ -9,7 +9,7 @@
 #include "main.h"
 
 /**
- * times_tables - 9 time tables
+ * times_table - 9 time tables
  *
  * Return: time
  */
