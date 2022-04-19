@@ -38,4 +38,7 @@ void jack_bauer(void);
 
 /* times_tables */
 void times_table(void);
+
+/* add */
+int add(int, int);
 #endif
