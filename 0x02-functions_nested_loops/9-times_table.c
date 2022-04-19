@@ -27,22 +27,22 @@ void times_table(void)
 				next = times * (number + 1);
 				if ((res < 10) && (next < 10))
 				{
-					printf("%d", res);
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
+					printf("%d,  ", res);
+					/*_putchar(',');*/
+					/*_putchar(' ');*/
+					/*_putchar(' ');*/
 				}
 				else if ((res < 10) && (next >= 10))
 				{
-					printf("%d", res);
-					_putchar(',');
-					_putchar(' ');
+					printf("%d, ", res);
+					/*_putchar(',');*/
+					/*_putchar(' ');*/
 				}
 				else
 				{
-					printf("%d", res);
-					_putchar(',');
-					_putchar(' ');
+					printf("%d, ", res);
+					/*_putchar(',');*/
+					/*_putchar(' ');*/
 				}
 			}
 			else
@@ -51,6 +51,6 @@ void times_table(void)
 				printf("%d", res);
 			}
 		}
-		_putchar('\n');
+		printf("\n");
 	}
 }
