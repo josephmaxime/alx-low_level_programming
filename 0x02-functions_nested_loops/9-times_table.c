@@ -27,20 +27,20 @@ void times_table(void)
 				next = times * (number + 1);
 				if ((res < 10) && (next < 10))
 				{
-					_putchar(res + '0');
+					printf("%d", res);
 					_putchar(',');
 					_putchar(' ');
 					_putchar(' ');
 				}
 				else if ((res < 10) && (next >= 10))
 				{
-					_putchar(res + '0');
+					printf("%d", res);
 					_putchar(',');
 					_putchar(' ');
 				}
 				else
 				{
-					_putchar(res + '0');
+					printf("%d", res);
 					_putchar(',');
 					_putchar(' ');
 				}
@@ -48,7 +48,7 @@ void times_table(void)
 			else
 			{
 				res = times * number;
-				_putchar(res + '0');
+				printf("%d", res);
 			}
 		}
 		_putchar('\n');
