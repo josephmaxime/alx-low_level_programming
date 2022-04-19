@@ -21,20 +21,34 @@ void times_table(void)
 	{
 		for (number = 0; number < 10; number++)
 		{
-			res = times * number;
-			next = times * (number + 1); /* the next value */
+			if (number < 9)
 			{
-				_putchar((res / 10) + '0');
+				res = times * number;
+				next = times * (number + 1);
+				if ((res < 10) && (next < 10))
+				{
+					_putchar(res + '0');
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+				}
+				else if ((res < 10) && (next >= 10))
+				{
+					_putchar(res + '0');
+					_putchar(',');
+					_putchar(' ');
+				}
+				else
+				{
+					_putchar(res + '0');
+					_putchar(',');
+					_putchar(' ');
+				}
 			}
-			_putchar((res % 10) + '0');
-			if (number < 9) /* if the loop range < 9, add a comma and a space */
+			else
 			{
-				_putchar(',');
-				_putchar(' ');
-			}
-			if (next < 10 && number < 9)
-			{
-				_putchar(' ');
+				res = times * number;
+				_putchar(res + '0');
 			}
 		}
 		_putchar('\n');
