@@ -20,7 +20,7 @@ int main(void)
 
 	init_1 = 1;
 	init_2 = 2;
-	for (i = 0; i <= 50; i++)
+	for (i = 1; i <= 50; i++)
 	{
 		if (i <= 1)
 			next = i;
