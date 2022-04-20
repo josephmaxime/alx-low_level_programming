@@ -27,11 +27,11 @@ void print_times_table(int n)
 				{
 					res = times * number;
 					next = times * (number + 1);
-					if ((res < 10) && (next < 10))
+					if (next < 10)
 					{
 						printf("%d,   ", res);
 					}
-					else if ((res < 10) && (next >= 10))
+					else if ((next >= 10) && (next <= 100))
 					{
 						printf("%d,  ", res);
 					}
