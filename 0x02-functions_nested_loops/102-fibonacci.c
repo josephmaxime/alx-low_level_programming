@@ -37,7 +37,7 @@ int main(void)
 			init_1 = init_2;
 			init_2 = next;
 		}
-		printf("%lf, ", next);
+		printf("%i, ", next);
 	}
 
 	printf("\n");
