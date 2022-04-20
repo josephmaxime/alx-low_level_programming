@@ -16,7 +16,8 @@
 
 int main(void)
 {
-	int i, init_1, init_2, next;
+	int i;
+        double	init_1, init_2, next;
 
 	init_1 = 1;
 	init_2 = 2;
