@@ -20,10 +20,12 @@ int main(void)
 
 	init_1 = 1;
 	init_2 = 2;
-	for (i = 1; i <= 50; i++)
+	for (i = 0; i <= 50; i++)
 	{
-		if (i <= 1)
-			next = i;
+		if (i == 0)
+			next = init_1;
+		if (i == 1)
+			next = init_2;
 		else
 		{
 			next = init_1 + init_2;
