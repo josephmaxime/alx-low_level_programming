@@ -17,7 +17,7 @@
 int main(void)
 {
 	int i, mod_2;
-	long init_1, init_2, next, sum;
+	int init_1, init_2, next, sum;
 
 	init_1 = 1;
 	init_2 = 2;
@@ -34,8 +34,8 @@ int main(void)
 			sum += next;
 		}
 	}
-	
-	printf("%ld", sum);
+
+	printf("%d", sum);
 	printf("\n");
 	return (0);
 }
