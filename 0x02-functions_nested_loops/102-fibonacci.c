@@ -17,7 +17,7 @@
 int main(void)
 {
 	int i;
-        long init_1, init_2, next;
+	long init_1, init_2, next;
 
 	init_1 = 1;
 	init_2 = 2;
@@ -26,18 +26,30 @@ int main(void)
 		if (i == 0)
 		{
 			next = init_1;
+			printf("%ld, ", next);
 		}
 		else if (i == 1)
 		{
 			next = init_2;
+			printf("%ld, ", next);
 		}
 		else
 		{
-			next = init_1 + init_2;
-			init_1 = init_2;
-			init_2 = next;
+			if (i < 49)
+			{
+				next = init_1 + init_2;
+				init_1 = init_2;
+				init_2 = next;
+				printf("%ld, ", next);
+			}
+			else
+			{
+				next = init_1 + init_2;
+				init_1 = init_2;
+				init_2 = next;
+				printf("%ld", next);
+			}
 		}
-		printf("%ld, ", next);
 	}
 
 	printf("\n");
