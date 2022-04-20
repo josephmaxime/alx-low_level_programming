@@ -23,7 +23,7 @@ int main(void)
 	init_2 = 2;
 	sum = 2;
 	next = 0;
-	for (i = 2; i < 4000000; i++)
+	while (sum <= 4000000)
 	{
 		next = init_1 + init_2;
 		init_1 = init_2;
