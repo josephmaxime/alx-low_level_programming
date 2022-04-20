@@ -49,6 +49,6 @@ void print_to_98(int);
 void print_times_table(int);
 
 /* natural */
-void natural(void);
+/* void natural(void);*/
 
 #endif

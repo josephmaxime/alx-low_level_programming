@@ -9,12 +9,12 @@
 #include "main.h"
 
 /**
- * natural - display sum of the natural numbers multiples of 3 or 5 below 1024
+ * main - display sum of the natural numbers multiples of 3 or 5 below 1024
  *
  * Return: 0 always for success
  */
 
-void natural(void)
+int main(void)
 {
 	int i, sum, mod_3, mod_5;
 
@@ -31,4 +31,5 @@ void natural(void)
 
 	printf("%d", sum);
 	printf("\n");
+	return (0);
 }
