@@ -18,9 +18,9 @@ int main(void)
 {
 	int i, sum, mod_3, mod_5;
 
+	sum = 0;
 	for (i = 0; i <= 1024; i++)
 	{
-		sum = 0;
 		mod_3 = i % 3;
 		mod_5 = i % 5;
 		if (mod_3 == 0 || mod_5 == 0)
