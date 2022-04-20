@@ -21,7 +21,7 @@ int main(void)
 
 	init_1 = 1;
 	init_2 = 2;
-	for (i = 0; i <= 50; i++)
+	for (i = 0; i < 50; i++)
 	{
 		if (i == 0)
 		{
@@ -37,7 +37,7 @@ int main(void)
 			init_1 = init_2;
 			init_2 = next;
 		}
-		printf("%f, ", next);
+		printf("%lf, ", next);
 	}
 
 	printf("\n");
