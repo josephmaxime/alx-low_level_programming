@@ -23,9 +23,13 @@ int main(void)
 	for (i = 0; i <= 50; i++)
 	{
 		if (i == 0)
+		{
 			next = init_1;
-		if (i == 1)
+		}
+		else if (i == 1)
+		{
 			next = init_2;
+		}
 		else
 		{
 			next = init_1 + init_2;
