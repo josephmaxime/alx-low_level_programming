@@ -17,7 +17,7 @@
 int main(void)
 {
 	int i;
-        double	init_1, init_2, next;
+        long init_1, init_2, next;
 
 	init_1 = 1;
 	init_2 = 2;
@@ -37,7 +37,7 @@ int main(void)
 			init_1 = init_2;
 			init_2 = next;
 		}
-		printf("%i, ", next);
+		printf("%ld, ", next);
 	}
 
 	printf("\n");
