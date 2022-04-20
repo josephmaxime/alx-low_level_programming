@@ -17,7 +17,7 @@
 int main(void)
 {
 	int i;
-	long init_1, init_2, next;
+	double init_1, init_2, next;
 
 	init_1 = 1;
 	init_2 = 2;
@@ -26,12 +26,12 @@ int main(void)
 		if (i == 0)
 		{
 			next = init_1;
-			printf("%ld, ", next);
+			printf("%d, ", (int)next);
 		}
 		else if (i == 1)
 		{
 			next = init_2;
-			printf("%ld, ", next);
+			printf("%d, ", (int)next);
 		}
 		else
 		{
@@ -40,14 +40,14 @@ int main(void)
 				next = init_1 + init_2;
 				init_1 = init_2;
 				init_2 = next;
-				printf("%ld, ", next);
+				printf("%d, ", (int)next);
 			}
 			else
 			{
 				next = init_1 + init_2;
 				init_1 = init_2;
 				init_2 = next;
-				printf("%ld", next);
+				printf("%d", (int)next);
 			}
 		}
 	}
