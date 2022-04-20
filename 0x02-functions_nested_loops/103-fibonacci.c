@@ -16,7 +16,7 @@
 
 int main(void)
 {
-	int i, mod_2;
+	int mod_2;
 	int init_1, init_2, next, sum;
 
 	init_1 = 1;
