@@ -9,6 +9,9 @@ void positive_or_negative(int i);
 /* largest_number */
 int largest_number(int, int, int);
 
+/* convert day */
+int convert_day(int, int);
+
 /* print remainning days */
 void print_remaining_days(int, int, int);
 
