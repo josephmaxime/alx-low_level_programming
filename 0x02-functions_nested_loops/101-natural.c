@@ -16,7 +16,7 @@
 
 void natural(void)
 {
-	int i, sum;
+	int i, sum, mod_3, mod_5;
 
 	for (i = 0; i <= 1024; i++)
 	{
