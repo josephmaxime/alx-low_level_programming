@@ -25,7 +25,8 @@ void rev_string(char *s);
 /* puts even number */
 void puts2(char *str);
 
-
+/* puts half string */
+void puts_half(char *str);
 
 
 
