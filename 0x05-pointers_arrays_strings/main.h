@@ -13,4 +13,6 @@ void swap_int(int *a, int *b);
 /* _strlen */
 int _strlen(char *s);
 
+/* puts */
+void _puts(char *str);
 #endif /* MAIN_H */
