@@ -15,4 +15,8 @@ int _strlen(char *s);
 
 /* puts */
 void _puts(char *str);
+
+/* reverse string */
+void print_rev(char *s);
+
 #endif /* MAIN_H */
