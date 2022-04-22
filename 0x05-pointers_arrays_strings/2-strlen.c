@@ -10,7 +10,7 @@
  * Return: int value of length
  */
 
-int _strlen(int *s)
+int _strlen(char *s)
 {
-	strlen(*s);
+	strlen(s);
 }
