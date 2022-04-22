@@ -19,4 +19,7 @@ void _puts(char *str);
 /* reverse string */
 void print_rev(char *s);
 
+/* reverse string */
+void rev_string(char *s);
+
 #endif /* MAIN_H */
