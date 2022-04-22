@@ -4,13 +4,13 @@
 #include "main.h"
 
 /**
- * _puts2 - put chain of char
+ * puts2 - put chain of char
  *
  * @str: pointer
  * Return: 0 Always in success
  */
 
-void _puts(char *str)
+void puts2(char *str)
 {
 	int i, length;
 
