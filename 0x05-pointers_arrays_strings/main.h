@@ -28,7 +28,8 @@ void puts2(char *str);
 /* puts half string */
 void puts_half(char *str);
 
-
+/* print array */
+void print_array(int *a, int n);
 
 
 
