@@ -9,7 +9,7 @@
  * @src: pointer
  * Return: 0 Always in success
  */
-char *swap_int(char *dest, char *src)
+char *_strcpy(char *dest, char *src)
 {
 	strcpy(dest, src);
 }
