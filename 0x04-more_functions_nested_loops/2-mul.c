@@ -6,7 +6,7 @@
 /**
  * mul - multiply two integer
  *
- * @a: number 
+ * @a: number
  * @b: number
  * Return: coefficient
  *
