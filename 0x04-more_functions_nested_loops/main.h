@@ -14,4 +14,7 @@ int _isdigit(int c);
 /* multiply */
 int mul(int a, int b);
 
+/* print numbers */
+void print_numbers(void);
+
 #endif
