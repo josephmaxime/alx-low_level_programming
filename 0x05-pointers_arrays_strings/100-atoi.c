@@ -28,7 +28,8 @@ int _atoi(char *s)
 		else if (!(isdigit(s[i])) && s[i] == '+')
 			sign *= sign;
 		else
-			val += (atoi(s[i]) + '0');
+			val += s[i];
+			/* strncat(val, &ch, 1);*/
 	}
 	return (sign * atoi(val));
 }
