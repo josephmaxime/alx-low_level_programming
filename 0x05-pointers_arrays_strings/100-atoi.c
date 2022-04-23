@@ -4,13 +4,15 @@
 #include "main.h"
 
 /**
- * atoi - convert string to integer
+ * _atoi - convert string to integer
  *
- * @n: pointer
+ * @s: pointer
  * Return: 0 Always in success
  */
 
 int _atoi(char *s)
 {
-	return (atoi(s));
+	int val;
+	val = atoi(s);
+	return val;
 }
