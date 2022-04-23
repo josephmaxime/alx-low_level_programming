@@ -4,7 +4,7 @@
 #include "main.h"
 
 /**
- * _strcpy - copie value of poiter 
+ * _strcpy - copie value of poiter
  * @dest: pointer
  * @src: pointer
  * Return: 0 Always in success
@@ -12,7 +12,7 @@
 char *_strcpy(char *dest, char *src)
 {
 	char *destination;
-	
+
 	destination = strcpy(dest, src);
 	return (destination);
 }
