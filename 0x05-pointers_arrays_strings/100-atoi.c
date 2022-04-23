@@ -14,7 +14,7 @@
 int _atoi(char *s)
 {
 	int i, length, sign;
-	char *val;
+	/* char *val; */
 
 	length = strlen(s);
 	sign = 1;
