@@ -22,4 +22,8 @@ void print_most_numbers(void);
 
 /* more numbers */
 void more_numbers(void);
+
+/* print line */
+void print_line(int n);
+
 #endif
