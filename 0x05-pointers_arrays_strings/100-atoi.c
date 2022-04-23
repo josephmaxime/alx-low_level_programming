@@ -19,12 +19,12 @@ int _atoi(char *s)
 	length = strlen(s);
 	sign = 1;
 	for (i = 0; i < length; i++)
-		if (!isdigit(s[i]) && s[i] == '-')
+		if (!(isdigit(s[i])) && s[i] == '-')
 			sign = -1 * sign;
 			sign *= sign;
-		else if (!isdigit(s[i]) && s[i] == '+')
+		else if (!(isdigit(s[i])) && s[i] == '+')
 			sign *= sign;
 		else
-			val += atoi(s[i]) + '0';
+			val += (atoi(s[i]) + '0');
 	return (sign * atoi(val));
 }
