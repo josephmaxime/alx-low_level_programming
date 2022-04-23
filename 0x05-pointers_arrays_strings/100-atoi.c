@@ -28,8 +28,8 @@ int _atoi(char *s)
 		else if (s[i] == '+')
 			sign *= sign;
 		else
-			val += s[i];
-			/* strncat(val, &ch, 1);*/
+			/* val += s[i];*/
+			strncat(val, &s[i], 1);
 	}
 	return (sign * atoi(val));
 }
