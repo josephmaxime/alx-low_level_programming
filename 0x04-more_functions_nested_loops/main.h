@@ -11,4 +11,7 @@ int _isupper(int c);
 /* if is digit */
 int _isdigit(int c);
 
+/* multiply */
+int mul(int a, int b);
+
 #endif
