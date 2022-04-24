@@ -24,4 +24,5 @@ char *string_toupper(char *str);
 
 /* capitalize all world */
 char *cap_string(char *str);
+
 #endif /* MAIN_H */
