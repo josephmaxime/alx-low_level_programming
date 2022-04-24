@@ -16,4 +16,7 @@ char *_strncpy(char *dest, char *src, int n);
 /* compares string */
 int _strcmp(char *s1, char *s2);
 
+/* reverse word */
+void reverse_array(int *a, int n);
+
 #endif /* MAIN_H */
