@@ -25,4 +25,6 @@ char *string_toupper(char *str);
 /* capitalize all world */
 char *cap_string(char *);
 
+/* leet */
+char *leet(char *);
 #endif /* MAIN_H */
