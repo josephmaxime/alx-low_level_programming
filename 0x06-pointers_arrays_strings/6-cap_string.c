@@ -7,12 +7,12 @@
 /**
  * cap_string - capitalize all word
  *
- * @str: string
+ * @s: string
  *
  * Return: string
  */
 
-char *cap_string(char *str)
+char *cap_string(char *s)
 {
 	int i, j;
 	char sep[] = {' ', '\t', '\n', ',', ';', '.', '!', '?', '(', ')', '{', '}'};
