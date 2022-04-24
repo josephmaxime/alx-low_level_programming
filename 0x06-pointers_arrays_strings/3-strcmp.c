@@ -6,13 +6,13 @@
 /**
  * _strcmp - compares two strings
  *
- * @dest: destination
- * @src: source
+ * @s1: destination
+ * @s2: source
  *
- * Return: string of concatenate
+ * Return: integer
  */
 
-char _strcmp(char *s1, char *s2)
+int _strcmp(char *s1, char *s2)
 {
 	return (strcmp(s1, s2));
 }
