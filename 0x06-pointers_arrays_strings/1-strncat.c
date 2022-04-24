@@ -17,6 +17,8 @@ char *_strncat(char *dest, char *src, int n)
 {
 	char *ch;
 
-	ch = strtok(src, n);
+	/* ch = strtok(src, n);*/
+	for (i = 0; i < n; i++)
+		ch[i] = src[i];
 	return (strcat(dest, ch));
 }
