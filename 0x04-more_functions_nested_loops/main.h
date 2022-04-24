@@ -32,4 +32,7 @@ void print_diagonal(int n);
 /* print square */
 void print_square(int size);
 
+/* print triangle */
+void print_triangle(int size);
+
 #endif
