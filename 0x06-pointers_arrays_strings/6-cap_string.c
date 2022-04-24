@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "main.h"
 #include <ctype.h>
+#include "main.h"
+
 /**
  * cap_string - capitalize all word
  *
@@ -13,7 +14,7 @@
 
 char *cap_string(char *str)
 {
-	int i,j;
+	int i, j;
 	char sep[] = {' ', '\t', '\n', ',', ';', '.', '!', '?', '(', ')', '{', '}'};
 
 	for (i = 0; s[i] != '\0'; i++)
