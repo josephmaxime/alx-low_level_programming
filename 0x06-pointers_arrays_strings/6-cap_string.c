@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "main.h"
-
+#include <ctype.h>
 /**
  * cap_string - capitalize all word
  *
