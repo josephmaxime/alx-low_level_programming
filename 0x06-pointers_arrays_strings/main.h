@@ -8,5 +8,5 @@ int _putchar(char);
 char *_strcat(char *dest, char *src);
 
 /* concatenates string with length */
-char *_strncat(char * dest, char *src, int n);
+char *_strncat(char *dest, char *src, int n);
 #endif /* MAIN_H */
