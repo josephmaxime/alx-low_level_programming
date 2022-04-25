@@ -24,5 +24,5 @@ int main(void)
 		}
 	}
 	printf("%ld", result);
-	return (0);
+	return (result);
 }
