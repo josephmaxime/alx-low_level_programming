@@ -17,13 +17,13 @@ int main(void)
 	num = 612852475143;
 	for (i = 2; num > 1; i++)
 	{
-		while (num % i == 0 && num != 1)
+		while (num % i == 0 && 1)
 		{
 			result = num / i;
 			num = num / i;
 		}
 		
 	}
-	printf("%ld", result);
+	printf("%ld", i);
 	return (0);
 }
