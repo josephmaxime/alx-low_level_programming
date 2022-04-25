@@ -12,7 +12,7 @@
 
 int main(void)
 {
-	long i, num;
+	long i, num, res;
 
 	num = 612852475143;
 	for (i = 2; num > 1; i++)
@@ -24,6 +24,7 @@ int main(void)
 		}
 		
 	}
-	printf("%ld", i--);
+	res = i -1;
+	printf("%ld", res);
 	return (0);
 }
