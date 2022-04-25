@@ -17,7 +17,7 @@ int main(void)
 	num = 612852475143;
 	for (i = 2; num > 1; i++)
 	{
-		while (num % i == 0)
+		while (num % i == 0 && num != 1)
 		{
 			result = num / i;
 			num = num / i;
