@@ -19,10 +19,9 @@ int main(void)
 	{
 		while(num % i == 0)
 		{
-			printf("%ld", i);
+			printf("%ld, ", i);
 			num = num / i;
 		}
-		printf(",");
 	}
 	return (0);
 }
