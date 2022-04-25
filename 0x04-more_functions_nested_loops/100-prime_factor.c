@@ -12,14 +12,14 @@
 
 int main(void)
 {
-	int i, num;
+	long i, num;
 
 	num = 612852475143;
 	for (i = 2; i <= num / 2; i++)
 	{
 		while(num % i == 0)
 		{
-			printf("%d, ", i);
+			printf("%l, ", i);
 			num = num / i;
 		}
 	}
