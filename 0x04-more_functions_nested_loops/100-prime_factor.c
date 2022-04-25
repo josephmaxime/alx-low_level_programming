@@ -24,6 +24,6 @@ int main(void)
 		}
 		
 	}
-	printf("%ld", i);
+	printf("%ld", i--);
 	return (0);
 }
