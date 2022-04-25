@@ -12,7 +12,7 @@
 
 int main(void)
 {
-	unsigned long i, j, isPrime;
+	unsigned int i, j, isPrime;
 
 	for (i = 2; i <= 612852475143; i++)
 	{
@@ -32,7 +32,7 @@ int main(void)
 			/* If 'i' is Prime number and factor of num */
 			if (isPrime == 1)
 			{
-				printf("%d, ", i);
+				printf("%ld, ", i);
 			}
 		}
 	}
