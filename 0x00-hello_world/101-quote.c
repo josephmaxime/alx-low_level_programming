@@ -5,13 +5,10 @@
 #include <unistd.h>
 
 /**
+ * main - Entry
  *
- * main - Entry point
- *
- * Return: Always 1 (Success)
- *
+ * Return: 1 Always true
  */
-
 int main(void)
 {
 	char test[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
