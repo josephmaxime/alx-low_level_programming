@@ -12,7 +12,7 @@
 
 int main(void)
 {
-	long i, num;
+	long i, res, num;
 
 	num = 612852475143;
 	for (i = 2; num > 1; i++)
