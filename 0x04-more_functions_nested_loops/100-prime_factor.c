@@ -23,6 +23,6 @@ int main(void)
 			num = num / i;
 		}
 	}
-	printf("ld", result);
+	printf("%ld", result);
 	return (0);
 }
