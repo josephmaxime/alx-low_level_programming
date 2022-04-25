@@ -12,7 +12,7 @@
 
 int main(void)
 {
-	int i, j, isPrime;
+	unsigned long i, j, isPrime;
 
 	for (i = 2; i <= 612852475143; i++)
 	{
