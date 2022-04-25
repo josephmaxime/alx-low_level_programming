@@ -17,7 +17,7 @@ int main(void)
 	for (i = 2; i <= 612852475143; i++)
 	{
 		/* Check 'i' for factor of num */
-		if (num % i == 0)
+		if (612852475143 % i == 0)
 		{
 			/* Check 'i' for Prime */
 			isPrime = 1;
