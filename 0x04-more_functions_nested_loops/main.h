@@ -35,4 +35,6 @@ void print_square(int size);
 /* print triangle */
 void print_triangle(int size);
 
+/* print numbers with */
+void print_number(int n);
 #endif
