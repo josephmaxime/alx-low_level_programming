@@ -20,8 +20,6 @@ void print_number(int n)
 	}
 	else
 		if (n / 10)
-			print(n / 10);
+			print_number(n / 10);
 	putchar(n % 10 + '0');
 }
-
-
