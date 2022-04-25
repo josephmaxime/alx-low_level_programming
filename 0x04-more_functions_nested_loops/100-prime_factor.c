@@ -12,16 +12,17 @@
 
 int main(void)
 {
-	long i, num;
+	long i, num, result;
 
 	num = 612852475143;
-	for (i = 2; i <= num / 2; i++)
+	for (i = 2; i <= num; i++)
 	{
-		while(num % i == 0)
+		if(num % i == 0)
 		{
-			printf("%ld, ", i);
+			result = num % i;
 			num = num / i;
 		}
 	}
+	printf("ld", result);
 	return (0);
 }
