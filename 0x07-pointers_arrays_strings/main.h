@@ -16,4 +16,7 @@ char *_strchr(char *s, char c);
 /* get length of a substring */
 unsigned int _strspn(char *s, char *accept);
 
+/* search a string of a bytes */
+char *strpbrk(char *s, char *accept);
+
 #endif /* MAIN_H */
