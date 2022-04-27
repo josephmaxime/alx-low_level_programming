@@ -22,6 +22,9 @@ char *_strpbrk(char *s, char *accept);
 /* locate substring */
 char *_strstr(char *haystack, char *needle);
 
+/* prints chessboard */
+void print_chessboard(char (*a)[a]);
+
 
 
 #endif /* MAIN_H */
