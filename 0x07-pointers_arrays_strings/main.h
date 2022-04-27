@@ -28,6 +28,9 @@ void print_chessboard(char (*a)[8]);
 /* sum of diagonal of array of two dimensions */
 void print_diagsums(int *a, int size);
 
+/* set the value */
+void set_string(char **s, char *to);
+
 
 
 #endif /* MAIN_H */
