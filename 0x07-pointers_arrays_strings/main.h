@@ -25,6 +25,9 @@ char *_strstr(char *haystack, char *needle);
 /* prints chessboard */
 void print_chessboard(char (*a)[8]);
 
+/* sum of diagonal of array of two dimensions */
+void print_diagsums(int *a, int size);
+
 
 
 #endif /* MAIN_H */
