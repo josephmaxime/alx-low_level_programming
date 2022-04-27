@@ -13,4 +13,7 @@ char *_memcpy(char *dest, char *src, unsigned int n);
 /* search char in string */
 char *_strchr(char *s, char c);
 
+/* get length of a substring */
+unsigned int _strspn(char *s, char *accept);
+
 #endif /* MAIN_H */
