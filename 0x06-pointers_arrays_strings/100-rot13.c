@@ -22,7 +22,7 @@ char *rot13(char *s)
 	{
 		if (isalpha(s[i]))
 		{
-			s[i] = s[i] + key;
+			s[i] = (s[i] + key) % 26;
 		}
 	}
 	return (s);
