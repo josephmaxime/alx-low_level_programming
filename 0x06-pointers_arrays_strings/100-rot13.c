@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "main.h"
-#include <ctype.c>
+#include <ctype.h>
 
 /**
  * rot13 - rotate a place of letter
@@ -14,7 +14,7 @@
 
 char *rot13(char *s)
 {
-	int i,key, length;
+	int i, key, length;
 
 	key = 13;
 	length = strlen(s);
