@@ -30,4 +30,8 @@ char *leet(char *);
 
 /* rot13 */
 char *rot13(char *s);
+
+/* print number */
+void print_number(int n);
+
 #endif /* MAIN_H */
