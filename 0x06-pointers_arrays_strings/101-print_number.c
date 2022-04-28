@@ -22,11 +22,11 @@ void print_number(int n)
 		;
 	if (n <= 10)
 	{
-		 print_number(n / 10);
+		print_number(n / 10);
 	}
 	else if (n >= 10 && n <= 100)
 	{
-		 print_number(n / 100);
+		print_number(n / 100);
 	}
 	else (n >= 100 && n <= 1000)	
 	{
