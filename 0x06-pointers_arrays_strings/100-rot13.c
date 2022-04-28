@@ -20,7 +20,7 @@ char *rot13(char *s)
 	length = strlen(s);
 	for (i = 0; i < length; i++)
 	{
-		if ((s[i] >= 'a' && 'z' >= s[i]) || (isupper(s[i]) >= 'A' && 'Z' >= isupper(s[i])))
+		if (isalpha(s[i]))
 		{
 			s[i] = s[i] + key;
 		}
