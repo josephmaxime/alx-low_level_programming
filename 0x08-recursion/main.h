@@ -19,4 +19,7 @@ int factorial(int n);
 /* power prototype */
 int _pow_recursion(int x, int y);
 
+/* sqrt */
+int _sqrt_recursion(int n);
+
 #endif /* MAIN_H */
