@@ -8,6 +8,8 @@
  * _strlen_recursion - recursion with puts
  *
  * @s: string
+ *
+ * Return: integer
  */
 
 int _strlen_recursion(char *s)
@@ -19,5 +21,5 @@ int _strlen_recursion(char *s)
 		return (0);
 	}
 	length = 1 + _strlen_recursion(++s);
-	return length;
+	return (length);
 }
