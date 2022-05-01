@@ -16,14 +16,14 @@
 
 int isPal(char *s, int min, int max)
 {
-	if (s == e)
+	if (min == max)
 		return (1);
 
 	/* if the first and last element of string are different */
 	if (s[min] != s[max])
 		return (0);
 	if (min < max  + 1)
-		return (isPal(s, s + 1, max - 1));
+		return (isPal(s, min + 1, max - 1));
 	return (1);
 }
 
