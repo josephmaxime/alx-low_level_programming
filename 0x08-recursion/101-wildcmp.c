@@ -6,9 +6,9 @@
 
 /**
  * wildcmp - compare two strins
- * 
+ *
  * @s1: sting 1
- * @s: string 2
+ * @s2: string 2
  * Return: 1 if two strings are equals and 0 otherwise.
  */
 int wildcmp(char *s1, char *s2)
