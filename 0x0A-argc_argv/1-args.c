@@ -11,7 +11,11 @@
  */
 int main(int argc, char **argv)
 {
-	if (argc)
-		printf("%d\n", argc);
+	int i;
+
+	while (argc--)
+		i++;
+
+	printf("%d\n", i);
 	return (0);
 }
