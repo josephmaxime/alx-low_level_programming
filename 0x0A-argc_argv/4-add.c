@@ -13,7 +13,8 @@
  */
 int main(int argc, char **argv)
 {
-	int result, i;
+	int result, i, j, length;
+	char elt;
 
 	if (argc == 1)
 	{
@@ -22,15 +23,19 @@ int main(int argc, char **argv)
 	else
 	{
 		result = 0;
-		for (i = 1; argv[i]; i++)
+		for (j = 1; j < argc; j++)
 		{
-			if (isdigit(*argv[i]))
-				result += atoi(argv[i]);
-			else
+			length = strlen(argv[j]);
+			for (i = 0; i < length; i++)
 			{
-				printf("Error\n");
-				return (1);
+				elt = argv[j][i];
+				if (!isdigit(elt))
+				{
+					printf("Error\n");
+					return (1);
+				}
 			}
+			result += atoi(argv[j]);
 		}
 		printf("%d\n", result);
 	}
