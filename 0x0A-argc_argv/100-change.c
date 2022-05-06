@@ -62,7 +62,7 @@ int main(int argc, char **argv)
 			}
 		}
 		number_coins = change_coins(atoi(argv[1]));
+		printf("%d\n", number_coins);
 	}
-	printf("%d\n", number_coins);
 	return (0);
 }
