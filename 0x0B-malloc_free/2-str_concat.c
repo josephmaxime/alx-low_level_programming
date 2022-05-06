@@ -22,12 +22,12 @@ char *str_concat(char *s1, char *s2)
 	if (s1 == NULL)
 	{
 		str_concat = (char *)malloc(length2 + 1);
-		str_concat =  strcat("", s2);
+		*str_concat = *s2;
 	}
 	else if (s2 == NULL)
 	{
 		str_concat = (char *)malloc(length1 + 1);
-		str_concat = strcat(s1, "");
+		*str_concat = *s1;
 	}
 	else
 	{
