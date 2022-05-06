@@ -27,7 +27,7 @@ char *str_concat(char *s1, char *s2)
 	}
 	else if (s2 == NULL)
 	{
-		str_concat = (char *)malloc(length + 1);
+		str_concat = (char *)malloc(length1 + 1);
 		str_concat = strcat(s1, "");
 	}
 	else
