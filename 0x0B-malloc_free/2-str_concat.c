@@ -27,6 +27,6 @@ char *str_concat(char *s1, char *s2)
 		str_concat = strcat(s1, "");
 	else
 		str_concat = strcat(s1, s2);
-	str_concat[length1 + length2 + 1] = '\0';
+	/* str_concat[length1 + length2] = '\0'; */
 	return (str_concat);
 }
