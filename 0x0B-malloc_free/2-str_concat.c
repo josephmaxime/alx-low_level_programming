@@ -18,8 +18,7 @@ char *str_concat(char *s1, char *s2)
 
 	length1 = strlen(s1);
 	length2 = strlen(s2);
-	if (str_concat == NULL)
-		return (NULL);
+
 	if (s1 == NULL)
 	{
 		str_concat = (char *)malloc(length2 + 1);
@@ -33,6 +32,8 @@ char *str_concat(char *s1, char *s2)
 	else
 	{
 		str_concat = (char *)malloc(length1 + length2 + 1);
+		if (str_concat == NULL)
+			return (NULL);
 		str_concat = strcat(s1, s2);
 	}
 	/* str_concat[length1 + length2] = '\0'; */
