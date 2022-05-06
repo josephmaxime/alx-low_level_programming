@@ -22,12 +22,16 @@ char *str_concat(char *s1, char *s2)
 	if (s1 == NULL)
 	{
 		str_concat = (char *)malloc(length2 + 1);
-		*str_concat = *s2;
+		for (i = 0; i < length2; i++)
+			str_concat[i] = s2[i];
+		str_concat[length2] = '\0';
 	}
 	else if (s2 == NULL)
 	{
 		str_concat = (char *)malloc(length1 + 1);
-		*str_concat = *s1;
+		for (i = 0; i < length1; i++)
+			str_concat[i] = s1[i];
+		str_concat[length1] = '\0';
 	}
 	else
 	{
@@ -36,6 +40,6 @@ char *str_concat(char *s1, char *s2)
 			return (NULL);
 		str_concat = strcat(s1, s2);
 	}
-	/* str_concat[length1 + length2] = '\0'; */
+	str_concat[length1 + length2] = '\0';
 	return (str_concat);
 }
