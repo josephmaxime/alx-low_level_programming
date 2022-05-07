@@ -15,4 +15,7 @@ char *str_concat(char *s1, char *s2);
 
 /* prototype alloc grid */
 int **alloc_grid(int width, int height);
+
+/* free  grid prototype */
+void free_grid(int **grid, int height);
 #endif /* MAIN_H */
