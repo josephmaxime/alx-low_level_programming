@@ -40,7 +40,7 @@ char **strtow(char *str)
 	i = 0;
 	while (token)
 	{
-		str_concat[i] = token;
+		str_concat[i] = strdup(token);
 		token = strtok(NULL, delimiter);
 		i++;
 	}
