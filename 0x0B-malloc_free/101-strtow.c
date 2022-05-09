@@ -17,7 +17,7 @@ char **strtow(char *str)
 	char delimiter[] = "";
 	char *token = strtok(str, delimiter);
 
-	if (str == NULL || str == "")
+	if (str == NULL || *str == "")
 	{
 		return (NULL);
 	}
