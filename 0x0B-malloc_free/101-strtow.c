@@ -17,7 +17,7 @@ char **strtow(char *str)
 	char delimiter[] = "";
 	char *token = strtok(str, delimiter);
 
-	if (str == NULL)
+	if (str == NULL || strcmp(str, "") == 0)
 	{
 		return (NULL);
 	}
@@ -38,7 +38,7 @@ char **strtow(char *str)
 		return (NULL);
 	}
 	i = 0;
-	while (token != NULL)
+	while (token)
 	{
 		str_concat[i] = token;
 		token = strtok(NULL, delimiter);
