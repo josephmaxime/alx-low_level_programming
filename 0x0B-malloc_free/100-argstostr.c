@@ -26,8 +26,10 @@ char *argstostr(int ac, char **av)
 	}
 	str_concat = (char *)malloc(sizeof(char) * length + 1);
 	if (str_concat == NULL)
+	{
 		free(str_concat);
 		return (NULL);
+	}
 	for (i = 0; i < ac ; i++)
 	{
 		strcat(str_concat, av[i]);
