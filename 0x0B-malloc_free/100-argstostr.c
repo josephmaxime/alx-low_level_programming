@@ -13,7 +13,7 @@
 
 char *argstostr(int ac, char **av)
 {
-	int length;
+	int length, i;
 	char *str_concat = "";
 
 	if (av == NULL || ac == 0)
