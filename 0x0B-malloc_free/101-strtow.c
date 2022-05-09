@@ -12,22 +12,37 @@
 
 char **strtow(char *str)
 {
-	int length, i;
-	char *str_concat;
-	char delimiter;
+	int length, i, count;
+	char **str_concat;
+	char delimiter[] = "";
+	char *token = strtok(str, delimiter);
 
 	if (str == NULL || str == "")
 	{
 		return (NULL);
 	}
 	length = strlen(str);
-	str_concat = (char *)malloc(sizeof(char) * length);
+	count = 0;
+	while(*str != '\0')
+	{
+		if (*str == delimiter)
+		{
+			count++;
+		}
+		str ++;
+	}
+	count += length + 1;
+	str_concat = malloc(sizeof(char *) * count);
 	if (str_concat == NULL)
 	{
-		/* free(str_concat); */
 		return (NULL);
 	}
-	delimiter = "";
-	str_concat = strtok(str, delimiter);
+	i = 0;
+	while (token != NULL)
+	{
+		str_concat[i] = token;
+		token = strtok(NULL, delimiter);
+		i++;
+	}
 	return (str_concat);
 }
