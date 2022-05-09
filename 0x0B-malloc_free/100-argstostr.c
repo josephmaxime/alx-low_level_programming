@@ -20,10 +20,10 @@ char *argstostr(int ac, char **av)
 	{
 		return (NULL);
 	}
-	while (0 < ac)
+	while (ac > 0)
 	{
 		length = strlen(av[ac]);
-		str_concat = (char *)malloc(sizeof(char) * length);
+		str_concat = (char *)malloc(sizeof(char) * length + 1);
 		if (str_concat == NULL)
 			return (NULL);
 		strcat(str_concat, av[ac]);
