@@ -21,4 +21,7 @@ void free_grid(int **grid, int height);
 
 /* args to string prototype */
 char *argstostr(int ac, char **av);
+
+/* strtow prototype */
+char **strtow(char *str);
 #endif /* MAIN_H */
