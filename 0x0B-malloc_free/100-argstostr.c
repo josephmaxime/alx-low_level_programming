@@ -21,11 +21,13 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	}
 	while (0 < ac)
+	{
 		length = strlen(av[ac]);
 		str_concat = (char *)malloc(sizeof(char) * length);
 		if (str_concat == NULL)
 			return (NULL);
 		strcat(str_concat, av[ac]);
 		printf("\n");
+	}
 	return (str_concat);
 }
