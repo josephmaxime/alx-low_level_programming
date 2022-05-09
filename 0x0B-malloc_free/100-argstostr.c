@@ -14,7 +14,7 @@
 char *argstostr(int ac, char **av)
 {
 	int length, i;
-	char *str_concat = "";
+	char *str_concat;
 
 	if (av == NULL || ac == 0)
 	{
@@ -27,7 +27,7 @@ char *argstostr(int ac, char **av)
 	str_concat = (char *)malloc(sizeof(char) * length + 1);
 	if (str_concat == NULL)
 		return (NULL);
-	while (ac > 0)
+	while (av)
 	{
 		strcat(str_concat, av[ac]);
 		strcat(str_concat, "\n");
