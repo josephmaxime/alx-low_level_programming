@@ -20,14 +20,17 @@ char *argstostr(int ac, char **av)
 	{
 		return (NULL);
 	}
+	for (i = 0; i < ac ; i++)
+	{
+		length += strlen(av[i]) + 1;
+	}
+	str_concat = (char *)malloc(sizeof(char) * length + 1);
+	if (str_concat == NULL)
+		return (NULL);
 	while (ac > 0)
 	{
-		length = strlen(av[ac]);
-		str_concat = (char *)malloc(sizeof(char) * length + 1);
-		if (str_concat == NULL)
-			return (NULL);
 		strcat(str_concat, av[ac]);
-		printf("\n");
+		strcat(str_concat, "\n");
 	}
 	return (str_concat);
 }
