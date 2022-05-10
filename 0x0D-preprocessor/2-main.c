@@ -14,8 +14,9 @@ int main(int argc, char **argv)
 {
 	int i, length;
 
-	length = strlen(argv[0]);
-	for (i = 0; i < length; i++)
-		putchar(argv[0][i]);
+	if (argc == 0)
+		length = strlen(argv[argc]);
+		for (i = 0; i < length; i++)
+			putchar(argv[argc][i]);
 	return (0);
 }
