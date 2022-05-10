@@ -12,7 +12,7 @@
 
 int main(int argc, char **argv)
 {
-	int i;
+	int i, length;
 
 	length = strlen(argv[0]);
 	for (i = 0; i < length; i++)
