@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * main - Entry code
@@ -18,5 +19,6 @@ int main(int argc, char **argv)
 		length = strlen(argv[argc]);
 		for (i = 0; i < length; i++)
 			putchar(argv[argc][i]);
+			putchar('\n');
 	return (0);
 }
