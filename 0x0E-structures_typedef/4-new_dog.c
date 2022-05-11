@@ -20,9 +20,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(d);
 		return (NULL);
 	}
-	strcpy(d->name, name);
-	strcpy(d->owner, owner);
-	strcpy(d->age, age);
+	d->name = strdup(name);
+	d->owner = strdup(owner);
+	d->age = strdup(age);
 	return (d);
 }
 
