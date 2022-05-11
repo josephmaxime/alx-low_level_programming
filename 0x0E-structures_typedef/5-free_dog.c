@@ -5,7 +5,7 @@
 /**
  * free_dog - create a new dog
  * @d: structure of dog
- * 
+ *
  */
 void free_dog(dog_t *d)
 {
