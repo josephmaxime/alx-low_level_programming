@@ -16,13 +16,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	/* d = malloc(sizeof(struct dog)); */
 	d->name = (char *)malloc(sizeof(char *));
-	d->age = (float)malloc(sizeof(float));
+	/* d->age = (float)malloc(sizeof(float));*/
 	d->owner = (char *)malloc(sizeof(char *));
 	if (d == NULL)
 	{
 		free(d->name);
 		free(d->owner);
-		free(d->age);
+		/* free(d->age); */
 		return (NULL);
 	}
 	d->name = strdup(name);
