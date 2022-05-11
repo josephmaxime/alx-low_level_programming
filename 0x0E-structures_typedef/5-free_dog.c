@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "dogis.h"
+#include "dog.h"
 /**
  * free_dog - create a new dog
  * @d: structure of dog
