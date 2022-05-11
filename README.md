@@ -1,2 +1,1 @@
-# alx-low_level_programming
-Hello world in C programming
+0x0E-structures_typedef
