@@ -17,7 +17,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 	d = malloc(sizeof(struct dog));
 	if (d == NULL)
 	{
-		free(d);
 		return (NULL);
 	}
 	if (name == NULL)
@@ -32,8 +31,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(d);
 		return (NULL);
 	}
-	d->name = name;
-	d->owner = owner;
+	d->name = strdup(name);
+	d->owner = strdup(owner);
 	d->age = age;
 	return (d);
 }
