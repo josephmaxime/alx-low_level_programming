@@ -6,4 +6,7 @@ void print_name(char *name, void (*f)(char *));
 
 /* prototype array iterator */
 void array_iterator(int *array, size_t size, void (*action)(int));
+
+/* prototype int index */
+int int_index(int *array, int size, int (*cmp)(int));
 #endif
