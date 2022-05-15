@@ -36,10 +36,9 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 	i = 0;
-	while (op_b[i])
+	while (op_b[i] == op[0])
 	{
-		if (op_b[i] == op[0])
-			printf("%d\n", get_op_func(argv[2])(number_1, number_2));
+		printf("%d\n", get_op_func(argv[2])(number_1, number_2));
 		i++;
 	}
 	return (0);
