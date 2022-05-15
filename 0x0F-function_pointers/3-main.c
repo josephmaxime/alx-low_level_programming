@@ -14,6 +14,7 @@
 int main(int argc, char *argv[])
 {
 	int number_1, number_2;
+	char *op;
 
 	if (argc != 4)
 	{
@@ -22,6 +23,7 @@ int main(int argc, char *argv[])
 	}
 	number_1 = atoi(argv[1]);
 	number_2 = atoi(argv[3]);
+	op = argv[2];
 	if ((*op == '/' && number_2 == 0) || (*op == '%' && number_2 == 0))
 	{
 		printf("Error\n");
