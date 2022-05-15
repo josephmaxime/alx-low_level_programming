@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 {
 	int i, number_1, number_2;
 	char *op;
-	char *op_b = {'+','-','*','/','%''};
+	char *op_b = {'+','-','*','/','%'};
 
 	if (argc != 4)
 	{
