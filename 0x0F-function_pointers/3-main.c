@@ -13,19 +13,14 @@
 
 int main(int argc, char *argv[])
 {
-	int i, number_1, number_2;
+	int  number_1, number_2;
 	char *op;
-	char op_b[] = {'+','-','*','/','%'};
+	/* char op_b[] = {'+','-','*','/','%'}; */
 
-	if (argc != 4)
-	{
-		printf("Error\n");
-		exit(98);
-	}
 	number_1 = atoi(argv[1]);
 	number_2 = atoi(argv[3]);
 	op = argv[2];
-	if (get_op_func(op) == NULL || op[1] != '\0')
+	if (get_op_func(op) == NULL || op[1] != '\0' || argc != 4)
 	{
 		printf("Error\n");
 		exit(99);
@@ -35,11 +30,17 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(100);
 	}
-	i = 0;
-	while (op_b[i] == op[0])
+	switch (op[0])
 	{
-		printf("%d\n", get_op_func(argv[2])(number_1, number_2));
-		i++;
+		case '+':
+		case '-':
+		case '*':
+		case '/':
+		case '%':	
+			printf("%d\n", get_op_func(argv[2])(number_1, number_2));
+			break;
+		default:
+		printf("Error\n");
 	}
 	return (0);
 }
