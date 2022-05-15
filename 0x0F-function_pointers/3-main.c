@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 {
 	int i, number_1, number_2;
 	char *op;
-	char *op_b = {'+','-','*','/','%'};
+	char op_b[] = {'+','-','*','/','%'};
 
 	if (argc != 4)
 	{
@@ -40,6 +40,7 @@ int main(int argc, char *argv[])
 	{
 		if (op_b[i] == op[0])
 			printf("%d\n", get_op_func(argv[2])(number_1, number_2));
+		i++;
 	}
 	return (0);
 }
