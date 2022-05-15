@@ -13,8 +13,9 @@
 
 int main(int argc, char *argv[])
 {
-	int number_1, number_2;
+	int i, number_1, number_2;
 	char *op;
+	char *op_b = {'+','-','*','/','%''};
 
 	if (argc != 4)
 	{
@@ -34,6 +35,11 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(100);
 	}
-	printf("%d\n", get_op_func(argv[2])(number_1, number_2));
+	i = 0;
+	while (op_b[i])
+	{
+		if (op_b[i] == op[0])
+			printf("%d\n", get_op_func(argv[2])(number_1, number_2));
+	}
 	return (0);
 }
