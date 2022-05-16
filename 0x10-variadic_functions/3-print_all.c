@@ -20,7 +20,7 @@ void print_all(const char * const format, ...)
 	length = 0;
 	while (format[length])
 		length++;
-	while (format != NULL && *(format + i) != '\0')
+	while (format[i]) /* != NULL && *(format + i) != '\0') */
 	{
 		if (i == length - 1)
 			separator = "";
