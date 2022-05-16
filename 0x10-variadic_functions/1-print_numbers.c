@@ -21,8 +21,8 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	{
 		number = va_arg(ap, unsigned int); /* get the next argument val */
 		printf("%d", number);
-		if (i != n - 1)
-			printf("%s", *separator);
+		if (i < n - 1)
+			printf("%s", separator);
 	}
 	va_end(ap); /* clean up */
 	printf("\n");
