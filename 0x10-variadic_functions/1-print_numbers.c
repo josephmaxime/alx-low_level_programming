@@ -15,14 +15,14 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i, number;
 
 	if (n == 0 || separator == NULL)
-		return (0);
+		exit(0);
 	va_start(ap, n); /* initialization */
 	for (i = 0; i < n; i++)
 	{
 		number = va_arg(ap, unsigned int); /* get the next argument val */
 		printf("%d", number);
 		if (i != n - 1)
-			printf("%s", *separetor);
+			printf("%s", *separator);
 	}
 	va_end(ap); /* clean up */
 	printf("\n");
