@@ -28,4 +28,7 @@ list_t *add_node(list_t **head, const char *str);
 
 /* add a new node in end */
 list_t *add_node_end(list_t **head, const char *str);
+
+/* free linked list prototype */
+void free_list(list_t *head);
 #endif /* LISTS_H */
