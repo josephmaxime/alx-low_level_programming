@@ -25,4 +25,7 @@ size_t list_len(const list_t *h);
 
 /* add a new node prototype */
 list_t *add_node(list_t **head, const char *str);
+
+/* add a new node in end */
+list_t *add_node_end(list_t **head, const char *str);
 #endif /* LISTS_H */
