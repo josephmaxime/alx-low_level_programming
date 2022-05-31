@@ -28,13 +28,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	if (n >= length2)
 	{
-		strcat(ptr, s1);
-		strcat(ptr, s2);
+		n = length2;
 	}
-	else
-	{
-		strcat(ptr, s1);
-		strncat(ptr, s2, n);
-	}
+	strcat(ptr, s1);
+	strncat(ptr, s2, n);
 	return (ptr);
 }
