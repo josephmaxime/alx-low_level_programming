@@ -23,7 +23,7 @@ int *array_range(int min, int max)
 	if (ptr == NULL)
 		return (NULL);
 
-	mem = min
+	mem = min;
 	for (; (i < max - min + 1); i++)
 	{
 		ptr[i] = mem;
