@@ -8,12 +8,13 @@
  *
  * @nmemb: array elements.
  * @size: size bit.
- * Return: return array. 
+ * Return: return array.
  */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *ptr;
+	int i = 0;
 
 	if (size == 0 || nmemb == 0)
 		return (NULL);
