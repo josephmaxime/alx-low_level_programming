@@ -35,7 +35,8 @@ int isbinary(const char *b)
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int i = 0, k = 1;
+	unsigned int k = 1;
+	int i = 0;
 	unsigned int length, num = 0;
 
 	if (b == NULL)
