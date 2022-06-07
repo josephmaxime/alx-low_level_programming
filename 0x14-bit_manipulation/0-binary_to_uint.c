@@ -1,9 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 #include "main.h"
 #include <string.h>
 
+/**
+ * _pow - number raise of power.
+ *
+ * @x: number.
+ * @y: power.
+ * Return: int.
+ */
+int _pow(int x, int y)
+{
+	if (y == 0)
+		return (1);
+	else if (y < 0)
+		return (-1);
+	else
+		return (x * _pow(x, y - 1));
+}
 /**
  * isbinary - test if pointing on char 0 or 1.
  *
@@ -49,7 +64,7 @@ unsigned int binary_to_uint(const char *b)
 	for (i = length - 1; i >= 0; i--)
 	{
 		if (b[i] == '1')
-			num += (int)pow(2, power);
+			num += (int)_pow(2, power);
 		power++;
 	}
 
