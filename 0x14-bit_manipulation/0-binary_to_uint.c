@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 #include "main.h"
 #include <string.h>
 
@@ -35,7 +36,7 @@ int isbinary(const char *b)
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int k = 1;
+	unsigned int power = 0;
 	int i = 0;
 	unsigned int length, num = 0;
 
@@ -48,8 +49,8 @@ unsigned int binary_to_uint(const char *b)
 	for (i = length - 1; i >= 0; i--)
 	{
 		if (b[i] == '1')
-			num += k;
-		k *= 2;
+			num += (int)pow(2, power);
+		power++;
 	}
 
 	return (num);
