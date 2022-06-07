@@ -44,7 +44,7 @@ unsigned int binary_to_uint(const char *b)
 		return (0);
 
 	length = strlen(b);
-	for (i = length - 1; i > 0; i--)
+	for (i = length - 1; i >= 0; i--)
 	{
 		if (b[i] == '1')
 			num += k;
