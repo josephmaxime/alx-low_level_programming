@@ -31,7 +31,7 @@ int isbinary(const char *b)
 
 	while (b[i])
 	{
-		if (b[i] != '0' || b[i] != '1')
+		if (b[i] != '0' && b[i] != '1')
 		{
 			val = 0;
 			break;
