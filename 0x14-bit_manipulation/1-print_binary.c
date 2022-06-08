@@ -11,13 +11,18 @@
 
 void print_binary(unsigned long int n)
 {
-	int i, val;
-	for (i = 31; i >= 0; i--)
+	int val = n;
+	/* while (val > 1)
 	{
 		val = n >> i;
 		if (val & 1)
 			putchar('1');
 		else
 			putchar('0');
+	} */
+	if (val > 1)
+	{
+		print_binary(val >> 1);
 	}
+	putchar((val & 1) + '0');
 }
