@@ -11,15 +11,8 @@
 
 void print_binary(unsigned long int n)
 {
-	int val = n;
-	/* while (val > 1)
-	{
-		val = n >> i;
-		if (val & 1)
-			putchar('1');
-		else
-			putchar('0');
-	} */
+	unsigned long int val = n;
+
 	if (val > 1)
 	{
 		print_binary(val >> 1);
