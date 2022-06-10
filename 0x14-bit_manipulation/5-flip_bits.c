@@ -4,7 +4,7 @@
 #include <string.h>
 
 /**
- * flip_bits - number of bits you would need to flip 
+ * flip_bits - number of bits you would need to flip
  * to get from number to another.
  *
  * @n: number.
@@ -18,7 +18,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	unsigned long int next;
 	unsigned int nb = 0;
 
-	for (next = 0; next < 32; next++)
+	for (next = 0; next < (sizeof(n) * 8); next++)
 	{
 		k_n = n >> next;
 		k_m = m >> next;
