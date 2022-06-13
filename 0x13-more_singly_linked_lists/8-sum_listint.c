@@ -11,7 +11,6 @@
 
 int sum_listint(listint_t *head)
 {
-	listint_t *node;
 	int sum;
 
 	if (head == NULL)
@@ -19,12 +18,11 @@ int sum_listint(listint_t *head)
 		return (0);
 	}
 
-	node = head;
 	sum = 0;
-	while (node->next)
+	while (head != NULL)
 	{
-		node = node->next;
-		sum += node->n;
+		sum += head->n;
+		head = head->next;
 	}
 
 	return (sum);
