@@ -10,12 +10,10 @@
 listint_t *reverse_listint(listint_t **head)
 {
 	listint_t *prv = NULL;
-	listint_t *node = *head;
 	listint_t *nxt = NULL;
 
 	if (*head == NULL)
 	{
-		free(node);
 		return (NULL);
 	}
 
