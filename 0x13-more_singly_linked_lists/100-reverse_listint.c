@@ -4,6 +4,8 @@
 
 /**
  * reverse_listint - reverse linked list.
+ *
+ * @head: pointer of linked list.
  * Return: return first node.
  */
 
