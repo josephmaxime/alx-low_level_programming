@@ -61,7 +61,7 @@ int copy( char *file_to, char *file_from)
 	fd_checker(fd_w, file_to, 'w');
 
 	fd_r = open(file_from, O_RDONLY);
-	fd_checker(fd_r, file_to, 'r');
+	fd_checker(fd_r, file_from, 'r');
 
 	str = malloc(sizeof(char) * 1024);
 	if (str == NULL)
