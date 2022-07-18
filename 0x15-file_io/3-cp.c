@@ -55,8 +55,7 @@ int copy( char *file_to, char *file_from)
 	char *str;
 	int fd_w, fd_r, let_r, let_w;
 
-	fd_w = open(file_to, O_WRONLY | O_CREAT | O_TRUNC |
-			S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
+	fd_w = open(file_to, O_WRONLY | O_CREAT | O_TRUNC | S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
 	fd_checker(fd_w, file_to, 'w');
 
 	fd_r = open(file_from, O_RDONLY);
