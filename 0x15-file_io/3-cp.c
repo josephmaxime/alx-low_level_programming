@@ -85,15 +85,15 @@ int copy( char *file_to, char *file_from)
  * Return: 0 for Always success.
  */
 
-void main(int argc, char **argv[])
+int main(int argc, char **argv)
 {
 
 	if (argc != 3)
 	{
-		fprintf(stderr, "Usage: cp 
-				file_from file_to\n");
+		fprintf(stderr, "Usage: cp file_from file_to\n");
 		exit (97);
 	}
 
 	copy(argv[2], argv[1]);
+	return (0);
 }
