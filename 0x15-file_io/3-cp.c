@@ -76,6 +76,8 @@ int copy( char *file_to, char *file_from)
 	fd_checker(fd_w, "", 'c');
 	fd_checker(fd_w, "", 'c');
 	free(str);
+
+	return (1);
 }
 /**
  * main - Entry code
