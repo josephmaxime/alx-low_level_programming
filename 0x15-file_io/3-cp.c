@@ -53,7 +53,7 @@ int fd_checker(int fd, char *file, char type_fd)
 int copy( char *file_to, char *file_from)
 {
 	char *str;
-	int fd_w, fd_r, length, wr;
+	int fd_w, fd_r, let_r, let_w;
 
 	fd_w = open(file_to, O_WRONLY | O_CREAT | O_TRUNC |
 			S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
