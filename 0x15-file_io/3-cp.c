@@ -34,7 +34,8 @@ int fd_checker(int fd, char *file, char type_fd)
 	}
 	else
 	{
-		if (!close(fd))
+		close = close(fd);
+		if (close == -1)
 		{
 			fprintf(stderr, "Error: Can't close fd %d\n"
 					, fd);
