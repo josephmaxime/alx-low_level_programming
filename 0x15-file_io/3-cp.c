@@ -20,8 +20,7 @@ int fd_checker(int fd, char *file, char type_fd)
 	{
 		if (fd < 0)
 		{
-			fprintf(stderr, "Error: Can't read from file %s\n"
-				       , file);
+			dprintf(2, "Error: Can't read from file %s\n", file);
 			exit (98);
 		}
 	}
@@ -29,8 +28,7 @@ int fd_checker(int fd, char *file, char type_fd)
 	{
 		if (fd < 0)
 		{
-			fprintf(stderr, "Error: Can't write to %s\n",
-					file);
+			dprintf(2, "Error: Can't write to %s\n", file);
 			exit( 99);
 		}
 	}
@@ -39,8 +37,7 @@ int fd_checker(int fd, char *file, char type_fd)
 		cl = close(fd);
 		if (cl == -1)
 		{
-			fprintf(stderr, "Error: Can't close fd %d\n"
-					, fd);
+			dprintf(2, "Error: Can't close fd %d\n", fd);
 			exit (100);
 		}
 	}
@@ -98,7 +95,7 @@ int main(int argc, char **argv)
 
 	if (argc != 3)
 	{
-		fprintf(stderr, "Usage: cp file_from file_to\n");
+		dprintf(2, "Usage: cp file_from file_to\n");
 		exit (97);
 	}
 
