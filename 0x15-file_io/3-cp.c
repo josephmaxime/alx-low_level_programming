@@ -72,11 +72,13 @@ int copy( char *file_to, char *file_from)
 
 	let_r = read(fd_r, str, 1024);
 	fd_checker(let_r, file_from, 'r');
+	fd_checker(let_r, "", 'c');
 
 	let_w = write(fd_w, str, 1024);
 	fd_checker(let_w, file_to, 'w');
+	fd_checker(let_w, "", 'c');
 
-	fd_checker(fd_w, "", 'c');
+	fd_checker(fd_r, "", 'c');
 	fd_checker(fd_w, "", 'c');
 	free(str);
 
