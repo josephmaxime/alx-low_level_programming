@@ -34,10 +34,10 @@ int fd_checker(int fd, char *file, char type_fd)
 	}
 	else
 	{
-		if (!close(fd_w))
+		if (!close(fd))
 		{
 			fprintf(stderr, "Error: Can't close fd %d\n"
-					, fd_w);
+					, fd);
 			exit (100);
 		}
 	}
