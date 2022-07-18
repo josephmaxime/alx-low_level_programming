@@ -70,7 +70,7 @@ int copy( char *file_to, char *file_from)
 	let_r = read(fd_r, str, 1024);
 	fd_checker(let_r, file_from, 'r');
 
-	let_w = write(fd_w, str, let_r);
+	let_w = write(fd_w, str, 1024);
 	fd_checker(let_w, file_to, 'w');
 
 	fd_checker(fd_w, "", 'c');
