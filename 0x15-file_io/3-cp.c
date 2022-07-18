@@ -18,7 +18,7 @@ int fd_checker(int fd, char *file, char type_fd)
 	{
 		if (fd < 0)
 		{
-			fprintf(STDERR_FILENO,"Error: Can't read from file %s\n"
+			fprintf(stderr, "Error: Can't read from file %s\n"
 				       , file);
 			exit (98);
 		}
@@ -27,7 +27,7 @@ int fd_checker(int fd, char *file, char type_fd)
 	{
 		if (fd < 0)
 		{
-			fprintf(STDERR_FILENO, "Error: Can't write to %s\n",
+			fprintf(stderr, "Error: Can't write to %s\n",
 					file);
 			exit( 99);
 		}
@@ -36,7 +36,7 @@ int fd_checker(int fd, char *file, char type_fd)
 	{
 		if (!close(fd_w))
 		{
-			fprintf(STDERR_FILENO, "Error: Can't close fd %d\n"
+			fprintf(stderr, "Error: Can't close fd %d\n"
 					, fd_w);
 			exit (100);
 		}
@@ -57,17 +57,15 @@ int copy( char *file_to, char *file_from)
 
 	fd_w = open(file_to, O_WRONLY | O_CREAT | O_TRUNC |
 			S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
-	fd_checker(fd_w, file_to, w);
+	fd_checker(fd_w, file_to, 'w');
 
 	fd_r = open(file_from, O_RDONLY);
-	fd_checker(fd_r, file_to, r);
+	fd_checker(fd_r, file_to, 'r');
 
-	str = malloc(sizeof(char) * (sizeof(file_from)));
+	str = malloc(sizeof(char) * 1024);
 	if (str == NULL)
 		return (0);
 
-	fd_w = open(file_to, O_WRONLY | O_CREAT | O_TRUNC |
-				S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
 	let_r = read(fd_r, str, 1024);
 	fd_checker(let_r, file_from, 'r');
 
@@ -92,7 +90,7 @@ void main(int argc, char **argv[])
 
 	if (argc != 3)
 	{
-		fprintf(STDERR_FILENO, "Usage: cp 
+		fprintf(stderr, "Usage: cp 
 				file_from file_to\n");
 		exit (97);
 	}
