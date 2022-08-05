@@ -32,17 +32,25 @@ int fd_checker(int fd, char *file, char type_fd)
 			exit( 99);
 		}
 	}
-	else
-	{
-		cl = close(fd);
-		if (cl == -1)
-		{
-			dprintf(2, "Error: Can't close fd %d\n", fd);
-			exit (100);
-		}
-	}
 	return (1);
 }
+
+/**
+ * fd_closed - close fd of file
+ *
+ * fd: file description
+ *
+ */
+void fd_closed(int fd)
+{
+	cl = close(fd);
+	if (cl == -1)
+	{
+		dprintf(2, "Error: Can't close fd %d\n", fd);
+		exit (100);
+	}
+}
+
 
 /**
  * copy - copy file to another file.
@@ -76,6 +84,8 @@ int copy( char *file_to, char *file_from)
 
 	fd_checker(fd_r, "", 'c');
 	fd_checker(fd_w, "", 'c');
+	fd_closed(fd_r)
+	fd_closed(fd_w)
 	free(str);
 
 	return (1);
