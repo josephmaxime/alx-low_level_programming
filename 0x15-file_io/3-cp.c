@@ -14,7 +14,6 @@
 
 int fd_checker(int fd, char *file, char type_fd)
 {
-	int cl;
 
 	if (type_fd == 'r')
 	{
