@@ -4,6 +4,8 @@
 #include <unistd.h>
 #include <fcntl.h>
 
+void fd_closed(int fd);
+
 /**
  * fd_checker - check if file description is > 0.
  *
