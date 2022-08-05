@@ -43,6 +43,8 @@ int fd_checker(int fd, char *file, char type_fd)
  */
 void fd_closed(int fd)
 {
+	int cl;
+
 	cl = close(fd);
 	if (cl == -1)
 	{
