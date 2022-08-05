@@ -70,16 +70,16 @@ int copy(char *file_to, char *file_from)
 	fd_r = open(file_from, O_RDONLY);
 	fd_checker(fd_r, file_from, 'r');
 	str = malloc(sizeof(char) * 1024);
-	let_r = read(fd_r, str, 1024);
-	fd_checker(let_r, file_from, 'r');
 
 	file_perm = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 	fd_w = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, file_perm);
 	fd_checker(fd_w, file_to, 'w');
 
-	let_w = 1024;
-	while (let_w != -1)
+	let_r = 1024;
+	while (let_r != 1024)
 	{
+		let_r = read(fd_r, str, 1024);
+		fd_checker(let_r, file_from, 'r');
 		let_w = write(fd_w, str, 1024);
 		if (let_w != let_r)
 			let_w = -1;
