@@ -76,8 +76,15 @@ int copy(char *file_to, char *file_from)
 	file_perm = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 	fd_w = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, file_perm);
 	fd_checker(fd_w, file_to, 'w');
-	let_w = write(fd_w, str, 1024);
-	fd_checker(let_w, file_to, 'w');
+
+	let_w = 1024;
+	while (let_w != -1)
+	{
+		let_w = write(fd_w, str, 1024);
+		if (let_w != let_r)
+			let_w = -1
+		fd_checker(let_w, file_to, 'w');
+	}
 
 	fd_closed(fd_r);
 	fd_closed(fd_w);
