@@ -7,6 +7,7 @@
  * add_dnodeint - add the elements of a dlistint_t list.
  *
  * @head: pointer to pointer of doubly linked list.
+ * @n: value of new node.
  *
  * Return: address of new element or nul if failed.
  */
