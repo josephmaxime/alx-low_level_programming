@@ -65,7 +65,7 @@ int copy(char *file_to, char *file_from)
 {
 	char *str;
 	mode_t file_perm;
-	int fd_w, fd_r, let_r, let_w;
+	ssize_t fd_w, fd_r, let_r, let_w;
 
 	fd_r = open(file_from, O_RDONLY);
 	fd_checker(fd_r, file_from, 'r');
