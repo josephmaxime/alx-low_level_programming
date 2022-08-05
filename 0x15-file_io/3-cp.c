@@ -82,7 +82,7 @@ int copy(char *file_to, char *file_from)
 	{
 		let_w = write(fd_w, str, 1024);
 		if (let_w != let_r)
-			let_w = -1
+			let_w = -1;
 		fd_checker(let_w, file_to, 'w');
 	}
 
