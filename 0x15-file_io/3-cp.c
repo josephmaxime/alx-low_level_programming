@@ -76,7 +76,7 @@ int copy(char *file_to, char *file_from)
 	fd_checker(fd_w, file_to, 'w');
 
 	let_r = 1024;
-	while (let_r != 1024)
+	while (let_r == 1024)
 	{
 		let_r = read(fd_r, str, 1024);
 		fd_checker(let_r, file_from, 'r');
