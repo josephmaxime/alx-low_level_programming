@@ -86,8 +86,8 @@ int copy( char *file_to, char *file_from)
 
 	fd_checker(fd_r, "", 'c');
 	fd_checker(fd_w, "", 'c');
-	fd_closed(fd_r)
-	fd_closed(fd_w)
+	fd_closed(fd_r);
+	fd_closed(fd_w);
 	free(str);
 
 	return (1);
