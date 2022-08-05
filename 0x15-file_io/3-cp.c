@@ -67,7 +67,7 @@ void fd_closed(int fd)
  */
 int copy(char *file_to, char *file_from)
 {
-	char *str;
+	char str[1024];
 	int fd_w, fd_r, let_r, let_w;
 
 	fd_w = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
@@ -76,7 +76,7 @@ int copy(char *file_to, char *file_from)
 	fd_r = open(file_from, O_RDONLY);
 	fd_checker(fd_r, file_from, 'r');
 
-	str = malloc(sizeof(char) * 1024);
+	/* str = malloc(sizeof(char) * 1024); */
 	if (str == NULL)
 		return (0);
 
