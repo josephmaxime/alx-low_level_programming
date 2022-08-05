@@ -21,8 +21,8 @@ int fd_checker(int fd, char *file, char type_fd)
 	{
 		if (fd < 0)
 		{
-			fd_closed(fd);
 			dprintf(2, "Error: Can't read from file %s\n", file);
+			close(fd)
 			exit(98);
 		}
 	}
@@ -30,8 +30,8 @@ int fd_checker(int fd, char *file, char type_fd)
 	{
 		if (fd < 0)
 		{
-			fd_closed(fd);
 			dprintf(2, "Error: Can't write to %s\n", file);
+			close(fd)
 			exit(99);
 		}
 	}
