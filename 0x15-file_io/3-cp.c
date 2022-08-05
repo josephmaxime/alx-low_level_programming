@@ -21,7 +21,7 @@ int fd_checker(int fd, char *file, char type_fd)
 		{
 			fd_closed(fd);
 			dprintf(2, "Error: Can't read from file %s\n", file);
-			exit (98);
+			exit(98);
 		}
 	}
 	else if (type_fd == 'w')
@@ -30,7 +30,7 @@ int fd_checker(int fd, char *file, char type_fd)
 		{
 			fd_closed(fd);
 			dprintf(2, "Error: Can't write to %s\n", file);
-			exit( 99);
+			exit(99);
 		}
 	}
 
@@ -40,7 +40,7 @@ int fd_checker(int fd, char *file, char type_fd)
 /**
  * fd_closed - close fd of file
  *
- * fd: file description
+ * @fd: file description
  *
  */
 void fd_closed(int fd)
@@ -51,7 +51,7 @@ void fd_closed(int fd)
 	if (cl == -1)
 	{
 		dprintf(2, "Error: Can't close fd %d\n", fd);
-		exit (100);
+		exit(100);
 	}
 }
 
@@ -63,7 +63,7 @@ void fd_closed(int fd)
  * @file_from: from file to copy.
  * Return: 1 from success.
  */
-int copy( char *file_to, char *file_from)
+int copy(char *file_to, char *file_from)
 {
 	char *str;
 	int fd_w, fd_r, let_r, let_w;
@@ -109,7 +109,7 @@ int main(int argc, char **argv)
 	if (argc != 3)
 	{
 		dprintf(2, "Usage: cp file_from file_to\n");
-		exit (97);
+		exit(97);
 	}
 
 	copy(argv[2], argv[1]);
