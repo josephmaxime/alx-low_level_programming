@@ -14,7 +14,7 @@ void fd_closed(int fd);
  * @type_fd: type of file description.
  */
 
-int fd_checker(int fd, char *file, char type_fd)
+void fd_checker(int fd, char *file, char type_fd)
 {
 
 	if (type_fd == 'r')
@@ -22,7 +22,6 @@ int fd_checker(int fd, char *file, char type_fd)
 		if (fd < 0)
 		{
 			dprintf(2, "Error: Can't read from file %s\n", file);
-			close(fd);
 			exit(98);
 		}
 	}
@@ -31,12 +30,9 @@ int fd_checker(int fd, char *file, char type_fd)
 		if (fd < 0)
 		{
 			dprintf(2, "Error: Can't write to %s\n", file);
-			close(fd);
 			exit(99);
 		}
 	}
-
-	return (1);
 }
 
 /**
@@ -63,38 +59,31 @@ void fd_closed(int fd)
  *
  * @file_to: file to copy.
  * @file_from: from file to copy.
- * Return: 1 from success.
+ * Return: 0 from success.
  */
 int copy(char *file_to, char *file_from)
 {
-	char str[1024];
+	char *str;
+	mode_t file_perm;
 	int fd_w, fd_r, let_r, let_w;
-
-	fd_w = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	fd_checker(fd_w, file_to, 'w');
 
 	fd_r = open(file_from, O_RDONLY);
 	fd_checker(fd_r, file_from, 'r');
-
-	/* str = malloc(sizeof(char) * 1024); */
-	if (str == NULL)
-		return (0);
-
+	str = malloc(sizeof(char) * 1024);
 	let_r = read(fd_r, str, 1024);
 	fd_checker(let_r, file_from, 'r');
-	fd_checker(let_r, "", 'c');
 
+	file_perm = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
+	fd_w = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, file_perm);
+	fd_checker(fd_w, file_to, 'w');
 	let_w = write(fd_w, str, 1024);
 	fd_checker(let_w, file_to, 'w');
-	fd_checker(let_w, "", 'c');
 
-	fd_checker(fd_r, "", 'c');
-	fd_checker(fd_w, "", 'c');
 	fd_closed(fd_r);
 	fd_closed(fd_w);
-	/* free(str); */
+	free(str);
 
-	return (1);
+	return (0);
 }
 /**
  * main - Entry code
