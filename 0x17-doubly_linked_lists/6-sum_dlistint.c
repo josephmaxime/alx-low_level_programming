@@ -6,7 +6,7 @@
 /**
  * sum_dlistint - sum all the elements of a dlistint_t list.
  *
- * @h: doubly linked list
+ * @head: doubly linked list
  *
  * Return: sum of node.
  */
