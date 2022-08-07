@@ -18,22 +18,22 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	dlistint_t *prev, *next, *current;
 	unsigned int i;
 
-	if (h == NULL)
+	if (head == NULL)
 		return (-1);
 
 	if (index != 0)
 	{
 		current = *h;
-		for (i = 0; i < idx - 1 && current != NULL; i++)
+		for (i = 0; i < index - 1 && current != NULL; i++)
 			current = current->next;
 
 		if (current == NULL)
 			return (-1);
 	}
 
-	if (idx == 0)
+	if (index == 0)
 	{
-		*h = current->next;
+		*head = current->next;
 	}
 
 	else
