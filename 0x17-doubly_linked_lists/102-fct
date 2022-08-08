@@ -1,0 +1,2 @@
+#!/bin/bash
+echo 906609 | head -c -1 > 102-result
